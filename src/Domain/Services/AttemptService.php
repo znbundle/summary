@@ -2,10 +2,12 @@
 
 namespace ZnBundle\Summary\Domain\Services;
 
-use ZnBundle\Summary\Domain\Interfaces\Services\AttemptServiceInterface;
-use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
-use ZnCore\Domain\Base\BaseCrudService;
 use ZnBundle\Summary\Domain\Entities\AttemptEntity;
+use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
+use ZnBundle\Summary\Domain\Interfaces\Services\AttemptServiceInterface;
+use ZnCore\Base\Libs\I18Next\Facades\I18Next;
+use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
 
 class AttemptService extends BaseCrudService implements AttemptServiceInterface
 {
@@ -15,17 +17,22 @@ class AttemptService extends BaseCrudService implements AttemptServiceInterface
         $this->setEntityManager($em);
     }
 
-    public function getEntityClass() : string
+    public function getEntityClass(): string
     {
         return AttemptEntity::class;
     }
 
-    public function countByIdentityId(int $identityId, string $action, int $lifeTime) : int
+    public function check(int $identityId, string $action, int $lifeTime, int $attemptCount): void
     {
-        return $this->getRepository()->countByIdentityId($identityId, $action, $lifeTime);
+        $count = $this->getRepository()->countByIdentityId($identityId, $action, $lifeTime);
+        if ($count >= $attemptCount) {
+            $message = I18Next::t('summary', 'attempt.message.attempts_have_been_exhausted');
+            throw new AttemptsExhaustedException($message);
+        }
     }
 
-    public function add(int $identityId, string $action, $data = null) {
+    public function increment(int $identityId, string $action, $data = null): void
+    {
         $attemptEntity = new AttemptEntity();
         $attemptEntity->setIdentityId($identityId);
         $attemptEntity->setAction($action);
