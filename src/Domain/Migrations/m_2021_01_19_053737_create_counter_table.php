@@ -30,12 +30,12 @@ class m_2021_01_19_053737_create_counter_table extends BaseCreateTableMigration
                 ->on($this->encodeTableName('user_identity'))
                 ->onDelete(ForeignActionEnum::CASCADE)
                 ->onUpdate(ForeignActionEnum::CASCADE);
-            $table
+            /*$table
                 ->foreign('session_id')
                 ->references('id')
                 ->on($this->encodeTableName('user_session'))
                 ->onDelete(ForeignActionEnum::CASCADE)
-                ->onUpdate(ForeignActionEnum::CASCADE);
+                ->onUpdate(ForeignActionEnum::CASCADE);*/
         };
     }
 }
