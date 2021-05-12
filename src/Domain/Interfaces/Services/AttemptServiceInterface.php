@@ -20,12 +20,11 @@ interface AttemptServiceInterface extends CrudServiceInterface
      */
     public function check(int $identityId, string $action, int $lifeTime, int $attemptCount) : void;
 
-    /**
+    /*
      * Добавить попытку
      * @param int $identityId
      * @param string $action
      * @param null $data
      */
-    public function increment(int $identityId, string $action, $data = null) : void;
+    //public function increment(int $identityId, string $action, $data = null) : void;
 }
-

@@ -38,7 +38,7 @@ class AttemptService extends BaseCrudService implements AttemptServiceInterface
         }
     }
 
-    public function increment(int $identityId, string $action, $data = null): void
+    private function increment(int $identityId, string $action, $data = null): void
     {
         $attemptEntity = new AttemptEntity();
         $attemptEntity->setIdentityId($identityId);
