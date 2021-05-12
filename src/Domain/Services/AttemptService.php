@@ -3,6 +3,7 @@
 namespace ZnBundle\Summary\Domain\Services;
 
 use ZnBundle\Summary\Domain\Entities\AttemptEntity;
+use ZnBundle\Summary\Domain\Exceptions\AttemptsBlockedException;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
 use ZnBundle\Summary\Domain\Interfaces\Services\AttemptServiceInterface;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
@@ -24,8 +25,14 @@ class AttemptService extends BaseCrudService implements AttemptServiceInterface
 
     public function check(int $identityId, string $action, int $lifeTime, int $attemptCount): void
     {
+        $this->increment($identityId, $action);
         $count = $this->getRepository()->countByIdentityId($identityId, $action, $lifeTime);
-        if ($count >= $attemptCount) {
+        //dd($count, $attemptCount);
+        if ($count == $attemptCount) {
+
+            $message = I18Next::t('summary', 'attempt.message.attempts_have_been_blocked');
+            throw new AttemptsBlockedException($message);
+        } elseif ($count > $attemptCount) {
             $message = I18Next::t('summary', 'attempt.message.attempts_have_been_exhausted');
             throw new AttemptsExhaustedException($message);
         }

@@ -2,6 +2,7 @@
 
 namespace ZnBundle\Summary\Domain\Interfaces\Services;
 
+use ZnBundle\Summary\Domain\Exceptions\AttemptsBlockedException;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
 use ZnCore\Domain\Interfaces\Service\CrudServiceInterface;
 
@@ -15,6 +16,7 @@ interface AttemptServiceInterface extends CrudServiceInterface
      * @param int $lifeTime
      * @param int $attemptCount
      * @throws AttemptsExhaustedException
+     * @throws AttemptsBlockedException
      */
     public function check(int $identityId, string $action, int $lifeTime, int $attemptCount) : void;
 
