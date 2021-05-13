@@ -10,18 +10,18 @@ class m_2021_01_19_053737_create_counter_table extends BaseCreateTableMigration
 {
 
     protected $tableName = 'summary_counter';
-    protected $tableComment = '';
+    protected $tableComment = 'Счетчик';
 
     public function tableSchema()
     {
         return function (Blueprint $table) {
             $table->integer('id')->autoIncrement()->comment('Идентификатор');
-            $table->string('entity_name')->comment('');
-            $table->integer('entity_id')->comment('');
-            $table->string('type')->comment('');
-            $table->integer('user_id')->nullable()->comment('');
-            $table->integer('session_id')->nullable()->comment('');
-            $table->string('rate')->nullable()->comment('');
+            $table->string('entity_name')->comment('Имя сущности-источника');
+            $table->integer('entity_id')->comment('ID сущности-источника');
+            $table->string('type')->comment('Тип');
+            $table->integer('user_id')->nullable()->comment('ID пользователя');
+            $table->integer('session_id')->nullable()->comment('ID сессии');
+            $table->string('rate')->nullable()->comment('Значение счетчика');
             $table->dateTime('created_at')->comment('Время создания');
 
             $table
