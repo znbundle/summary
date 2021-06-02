@@ -24,12 +24,14 @@ class m_2021_01_19_053737_create_counter_table extends BaseCreateTableMigration
             $table->string('rate')->nullable()->comment('Значение счетчика');
             $table->dateTime('created_at')->comment('Время создания');
 
-            $table
+            $this->addForeign($table, 'user_id', 'user_identity');
+
+            /*$table
                 ->foreign('user_id')
                 ->references('id')
                 ->on($this->encodeTableName('user_identity'))
                 ->onDelete(ForeignActionEnum::CASCADE)
-                ->onUpdate(ForeignActionEnum::CASCADE);
+                ->onUpdate(ForeignActionEnum::CASCADE);*/
             /*$table
                 ->foreign('session_id')
                 ->references('id')
