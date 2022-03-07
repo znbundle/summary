@@ -4,7 +4,7 @@ namespace ZnBundle\Summary\Domain\Repositories\Eloquent;
 
 use ZnBundle\Summary\Domain\Entities\CounterEntity;
 use ZnBundle\Summary\Domain\Interfaces\Repositories\CounterRepositoryInterface;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class CounterRepository extends BaseEloquentCrudRepository implements CounterRepositoryInterface
 {

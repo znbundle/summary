@@ -7,7 +7,7 @@ use ZnBundle\Summary\Domain\Interfaces\Repositories\AttemptRepositoryInterface;
 use ZnCore\Domain\Entities\Query\Where;
 use ZnCore\Domain\Enums\OperatorEnum;
 use ZnCore\Domain\Libs\Query;
-use ZnLib\Db\Base\BaseEloquentCrudRepository;
+use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class AttemptRepository extends BaseEloquentCrudRepository implements AttemptRepositoryInterface
 {
