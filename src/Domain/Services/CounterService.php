@@ -11,7 +11,7 @@ use ZnCore\Base\Exceptions\AlreadyExistsException;
 use ZnCore\Base\Exceptions\NotFoundException;
 use ZnCore\Domain\Base\BaseCrudService;
 use ZnCore\Domain\Entities\Query\Where;
-use ZnCore\Domain\Interfaces\Entity\EntityIdInterface;
+use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
 use ZnCore\Domain\Interfaces\Libs\EntityManagerInterface;
 use ZnCore\Domain\Libs\Query;
 
