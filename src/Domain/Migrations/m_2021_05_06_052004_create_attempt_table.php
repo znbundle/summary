@@ -24,13 +24,6 @@ class m_2021_05_06_052004_create_attempt_table extends BaseCreateTableMigration
             $table->index(['identity_id', 'action']);
 
             $this->addForeign($table, 'identity_id', 'user_identity');
-
-            /*$table
-                ->foreign('identity_id')
-                ->references('id')
-                ->on($this->encodeTableName('user_identity'))
-                ->onDelete(ForeignActionEnum::CASCADE)
-                ->onUpdate(ForeignActionEnum::CASCADE);*/
         };
     }
 }
