@@ -4,7 +4,7 @@ namespace ZnBundle\Summary\Domain\Interfaces\Services;
 
 use ZnBundle\Summary\Domain\Exceptions\AttemptsBlockedException;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
-use ZnCore\Domain\Interfaces\Service\CrudServiceInterface;
+use ZnCore\Base\Libs\Service\Interfaces\CrudServiceInterface;
 
 interface AttemptServiceInterface extends CrudServiceInterface
 {

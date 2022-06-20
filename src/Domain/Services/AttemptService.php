@@ -7,7 +7,7 @@ use ZnBundle\Summary\Domain\Exceptions\AttemptsBlockedException;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
 use ZnBundle\Summary\Domain\Interfaces\Services\AttemptServiceInterface;
 use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
 
 class AttemptService extends BaseCrudService implements AttemptServiceInterface

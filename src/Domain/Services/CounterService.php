@@ -9,7 +9,7 @@ use Packages\User\Domain\Interfaces\Services\SessionServiceInterface;
 use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Base\Exceptions\AlreadyExistsException;
 use ZnCore\Base\Exceptions\NotFoundException;
-use ZnCore\Domain\Base\BaseCrudService;
+use ZnCore\Base\Libs\Service\Base\BaseCrudService;
 use ZnCore\Base\Libs\Query\Entities\Where;
 use ZnCore\Contract\Domain\Interfaces\Entities\EntityIdInterface;
 use ZnCore\Base\Libs\EntityManager\Interfaces\EntityManagerInterface;
