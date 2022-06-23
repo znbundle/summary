@@ -2,8 +2,8 @@
 
 namespace ZnBundle\Summary\Domain\Interfaces\Services;
 
-use ZnCore\Base\Exceptions\AlreadyExistsException;
-use ZnCore\Base\Exceptions\NotFoundException;
+use ZnCore\Domain\Entity\Exceptions\AlreadyExistsException;
+use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Service\Interfaces\CrudServiceInterface;
 
 interface CounterServiceInterface extends CrudServiceInterface
