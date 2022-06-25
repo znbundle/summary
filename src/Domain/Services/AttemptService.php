@@ -6,7 +6,7 @@ use ZnBundle\Summary\Domain\Entities\AttemptEntity;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsBlockedException;
 use ZnBundle\Summary\Domain\Exceptions\AttemptsExhaustedException;
 use ZnBundle\Summary\Domain\Interfaces\Services\AttemptServiceInterface;
-use ZnCore\Base\I18Next\Facades\I18Next;
+use ZnLib\Components\I18Next\Facades\I18Next;
 use ZnCore\Domain\Service\Base\BaseCrudService;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;
 
