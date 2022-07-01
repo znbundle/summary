@@ -79,7 +79,7 @@ class CounterService extends BaseCrudService implements CounterServiceInterface
             $sessionEntity = $this->sessionService->currentSession();
             $query->whereNew(new Where('session_id', $sessionEntity->getId()));
         }
-        return $this->getRepository()->one($query);
+        return $this->getRepository()->findOne($query);
     }
 
     private function deleteRecord(string $entityName, int $entityId, string $type): int
