@@ -6,7 +6,7 @@ use ZnBundle\Summary\Domain\Entities\CounterEntity;
 use ZnBundle\Summary\Domain\Interfaces\Repositories\CounterRepositoryInterface;
 use ZnBundle\Summary\Domain\Interfaces\Services\CounterServiceInterface;
 use Packages\User\Domain\Interfaces\Services\SessionServiceInterface;
-use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
+use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Domain\Entity\Exceptions\AlreadyExistsException;
 use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Domain\Service\Base\BaseCrudService;
