@@ -9,11 +9,11 @@ use Packages\User\Domain\Interfaces\Services\SessionServiceInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnCore\Entity\Exceptions\AlreadyExistsException;
 use ZnCore\Entity\Exceptions\NotFoundException;
-use ZnCore\Domain\Service\Base\BaseCrudService;
-use ZnCore\Domain\Query\Entities\Where;
+use ZnCore\Service\Base\BaseCrudService;
+use ZnCore\Query\Entities\Where;
 use ZnCore\Entity\Interfaces\EntityIdInterface;
 use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Domain\Query\Entities\Query;
+use ZnCore\Query\Entities\Query;
 
 class CounterService extends BaseCrudService implements CounterServiceInterface
 {
