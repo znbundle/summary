@@ -2,7 +2,7 @@
 
 namespace ZnBundle\Summary\Domain\Interfaces\Repositories;
 
-use ZnCore\Repository\Interfaces\CrudRepositoryInterface;
+use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
 
 interface AttemptRepositoryInterface extends CrudRepositoryInterface
 {
