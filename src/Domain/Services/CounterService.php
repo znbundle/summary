@@ -8,7 +8,7 @@ use ZnBundle\Summary\Domain\Interfaces\Services\CounterServiceInterface;
 use Packages\User\Domain\Interfaces\Services\SessionServiceInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnDomain\Entity\Exceptions\AlreadyExistsException;
-use ZnDomain\Entity\Exceptions\NotFoundException;
+use ZnCore\Contract\Common\Exceptions\NotFoundException;
 use ZnDomain\Service\Base\BaseCrudService;
 use ZnDomain\Query\Entities\Where;
 use ZnDomain\Entity\Interfaces\EntityIdInterface;
