@@ -4,9 +4,9 @@ namespace ZnBundle\Summary\Domain\Repositories\Eloquent;
 
 use ZnBundle\Summary\Domain\Entities\AttemptEntity;
 use ZnBundle\Summary\Domain\Interfaces\Repositories\AttemptRepositoryInterface;
-use ZnCore\Query\Entities\Where;
-use ZnCore\Query\Enums\OperatorEnum;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Query\Entities\Where;
+use ZnDomain\Query\Enums\OperatorEnum;
+use ZnDomain\Query\Entities\Query;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 
 class AttemptRepository extends BaseEloquentCrudRepository implements AttemptRepositoryInterface

@@ -7,13 +7,13 @@ use ZnBundle\Summary\Domain\Interfaces\Repositories\CounterRepositoryInterface;
 use ZnBundle\Summary\Domain\Interfaces\Services\CounterServiceInterface;
 use Packages\User\Domain\Interfaces\Services\SessionServiceInterface;
 use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnCore\Entity\Exceptions\AlreadyExistsException;
-use ZnCore\Entity\Exceptions\NotFoundException;
+use ZnDomain\Entity\Exceptions\AlreadyExistsException;
+use ZnDomain\Entity\Exceptions\NotFoundException;
 use ZnDomain\Service\Base\BaseCrudService;
-use ZnCore\Query\Entities\Where;
-use ZnCore\Entity\Interfaces\EntityIdInterface;
+use ZnDomain\Query\Entities\Where;
+use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Query\Entities\Query;
 
 class CounterService extends BaseCrudService implements CounterServiceInterface
 {
